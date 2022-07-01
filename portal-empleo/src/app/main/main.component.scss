@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700,900');
+
+$border-radius-size: 14px;
+$recluiter: #02147d;
+$empleado: #474646;
+
+.mainheader{
+background: url('../../assets/city.jpg');
+background-repeat: repeat-y;
+align-self: center;
+
+}
+
+.container {
+    margin: auto;
+    display: grid;
+    white-space: normal;
+    grid-template-columns: 400px 400px;
+    width: 800px;
+    text-align: center;
+    
+}
+
+.wrapper {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    transition: transform 250ms;
+    &:focus {
+        outline: 0;
+    }
+}
+
+.portal-card {
+    background: white;
+    width: 300px;
+    display: inline-block;
+    margin: auto;
+    border-radius: $border-radius-size + 5;
+    position: relative;
+    text-align: center;
+    box-shadow: -1px 15px 30px -12px black;
+    z-index: 9999;
+    
+}
+
+.wrapper:hover{
+    transform: translateY(-20px);
+}
+
+.portal-card__image {
+    position: relative;
+    height: 230px;
+    margin-bottom: 35px;
+    border-top-left-radius: $border-radius-size;
+    border-top-right-radius: $border-radius-size;
+}
+
+.portal-card__image--recluiter {
+    background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/barbarian-bg.jpg');
+
+    img {
+        width: 300px;
+        position: absolute;
+        top: -8px;
+        left: -1px;
+    }
+}
+
+.portal-card__image--empleado {
+    background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/archer-bg.jpg');
+
+    img {
+        width: 400px;
+        position: absolute;
+        top: -1px;
+        left: -1px;
+    }
+}
+
+.portal-card__level {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 3px;
+    cursor: pointer;
+}
+
+.portal-card__level--recluiter {
+    color: $recluiter;
+}
+
+.portal-card__level--empleado {
+    color: $empleado;
+}
+
+.portal-card__unit-name {
+    font-size: 26px;
+    color: black;
+    font-weight: 900;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.portal-card__unit-description {
+    padding: 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.portal-card__unit-stats--recluiter {
+    background: $recluiter;
+
+    .one-third {
+        border-right: 2px solid #000000;
+    }
+}
+
+.portal-card__unit-stats--empleado {
+    background: $empleado;
+
+    .one-third {
+        border-right: 2px solid #000000;
+    }
+}
+
+.portal-card__unit-stats {
+
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    border-bottom-left-radius: $border-radius-size;
+    border-bottom-right-radius: $border-radius-size;
+    cursor: pointer;
+
+    .one-third {
+        width: 33%;
+        float: left;
+        padding: 20px 15px;
+    }
+
+    sup {
+        position: absolute;
+        bottom: 4px;
+        font-size: 45%;
+        margin-left: 2px;
+    }
+
+    .stat {
+        position: relative;
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .stat-value {
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 12px;
+    }
+
+    .no-border {
+        border-right: none;
+    }
+}
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+.slick-prev {
+    left: 100px;
+    z-index: 999;
+}
+
+.slick-next {
+    right: 100px;
+    z-index: 999;
+}
