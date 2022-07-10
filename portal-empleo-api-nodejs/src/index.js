@@ -1,14 +1,20 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const registerRoutes = require('./routes/register');
+const loginRoutes = require('./routes/login');
 
-//middleware
+//variables funcionamiento
 const app = express();
 const port = process.env.PORT || 9000;
+
+//middlewares
+app.use('/api/', registerRoutes, loginRoutes);
+
 
 //rutas
 app.get("/", (req, res) => {
     res.send('servidor funcionando correctamente');
-})
+});
 
 //conexion de mongodb
 mongoose
@@ -16,4 +22,4 @@ mongoose
     .then(() => console.log('conectado a la base de datos'))
     .catch((error) => console.log(error));
 
-app.listen(port, () => console.error('Servidor Funcionando en el port', port))
+app.listen(port, () => console.error('Servidor Funcionando en el port', port));

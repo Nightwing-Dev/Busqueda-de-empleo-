@@ -2,7 +2,8 @@ const express = require("express");
 
 const router = express.Router();
 
-//creacion de usuario...
-router.post('/users');
+router.post('/jobOffers', (req, res) => {
+    res.send('Oferta postulada Correctamente');
+});
 
 module.exports = router;
