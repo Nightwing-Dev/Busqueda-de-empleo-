@@ -4,7 +4,10 @@ const router = express.Router();
 
 //creacion de usuario por medio de un registro...
 router.post('/register', (req, res) => {
-    res.send("usuario creado exitosamente");
+    const register = registerSchema(req.body);
+    register.save().then((data) =>
+        res.json(data)).catch((error) => res.json
+            ({ message: error }));
 });
 
 module.exports = router;

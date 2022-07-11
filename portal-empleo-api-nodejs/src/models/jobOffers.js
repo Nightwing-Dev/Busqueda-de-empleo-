@@ -21,4 +21,4 @@ const jobOffersSchema = mongoose.Schema({
     timestamps: { createdAt: 'created_at', updatedAt: 'updated_at' },
 });
 
-module.export = mongoose.model('jobOffers', jobOffersSchema);
+module.exports = mongoose.model('jobOffers', jobOffersSchema);

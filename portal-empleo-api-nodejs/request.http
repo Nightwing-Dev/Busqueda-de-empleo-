@@ -1,11 +1,25 @@
 ###
-POST http://localhost:9000/api/users HTTP/1.1
+POST http://localhost:9000/api/register HTTP/1.1
 Content-Type: application/json
 
-{}
+{
+    "cedula": "1234567",
+    "email": "diiegodev@gmail.com",
+    "password": "diegoi12345",
+    "name": "diego andres",
+    "lastName": "echavarria ferro",
+    "age":"28",
+    "lastJob": "desarrollador",
+    "phoneNumber": "3127421361",
+    "avatar": "imagen.png"
+
+}
 
 ###
 POST http://localhost:9000/api/login HTTP/1.1
 Content-Type: application/json
 
-{}
+{
+    "email":"diegodev@gmail.com",
+    "password":"diego12345"
+}
