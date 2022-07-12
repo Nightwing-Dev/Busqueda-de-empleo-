@@ -18,7 +18,11 @@ const jobOffersSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    timestamps: { createdAt: 'created_at', updatedAt: 'updated_at' },
+    companyImage: {
+        type: String,
+        required: true
+    },
+    time : { type : Date, default: Date.now },
 });
 
 module.exports = mongoose.model('jobOffers', jobOffersSchema);

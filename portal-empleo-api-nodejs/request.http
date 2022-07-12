@@ -1,25 +1,46 @@
 ###
-POST http://localhost:9000/api/register HTTP/1.1
+POST http://localhost:9000/register HTTP/1.1
+Content-Type: application/json
+
+//{
+//    "cedula": "4454545",
+   // "email": "thera@gmail.",
+    //"password": "theraia12345",
+    //"name": "Inteligencia Artificial Thera",
+    //"lastName": "IA-2",
+   // "age":"1",
+   // "id":"6",
+    //"lastJob": "Asistente virtual",
+    //"phoneNumber": "432234453",
+    //"avatar": "ia.jpg"
+
+//}
+
+   {
+    "email":"holamundo@gmail.com",
+    "password":"ol234511111111"
+   }
+
+
+###
+POST http://localhost:9000/login HTTP/1.1
 Content-Type: application/json
 
 {
-    "cedula": "1234567",
-    "email": "diiegodev@gmail.com",
-    "password": "diegoi12345",
-    "name": "diego andres",
-    "lastName": "echavarria ferro",
-    "age":"28",
-    "lastJob": "desarrollador",
-    "phoneNumber": "3127421361",
-    "avatar": "imagen.png"
-
+    "email":"thera4@gmail.com",
+    "password":"the"
 }
 
 ###
-POST http://localhost:9000/api/login HTTP/1.1
+POST http://localhost:9000/api/jobOffers HTTP/1.1
 Content-Type: application/json
 
 {
-    "email":"diegodev@gmail.com",
-    "password":"diego12345"
+
+    "title": "desarrollador frontend",
+    "company":" Mazda Inc" ,
+    "salary":"200",
+    "location":"Francia",
+    "companyImage":"imagen.mazda.jpg", 
+    "time": ""
 }

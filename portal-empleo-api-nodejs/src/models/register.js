@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const registerSchema = mongoose.Schema({
 
     cedula: { type: Number, required: true },
-    email: { type: String, required: true },
+    email: { type: String, required: true, trim: true, lowercase: true, unique: true},
     password: { type: String, require: true },
     name: { type: String, required: true },
     lastName: { type: String, required: true },
