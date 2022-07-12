@@ -1,8 +1,11 @@
 const express = require("express");
 const router = express.Router();
 const { body, validationResult } = require('express-validator')
+const User = require('../models/login');
+
 
 router.post('/register',
+
        body("email", "Formato De Email Incorrecto")
               .trim()
               .isEmail()
@@ -11,7 +14,23 @@ router.post('/register',
               .trim()
               .isLength({ min: 6 }),
 
-       (req, res) => {
+       async (req, res) => {
+              const { email, password, } = req.body
+              try {
+                     //[para buscar por el email y no se repita]
+                     const user = await User.findOne({ email });
+                     if (user) throw { code: 11000 };
+
+                     user = new User({ email, password });
+                     await user.save();
+                     //enviando jwt 
+              } catch (error) {
+                     console.log(error.code);
+                     //para buscar por email mongodb
+                     if (error.code === 11000) {
+                            return res.status(400).json({ error: "ya existe este usuario, crea otro" });
+                     }
+              }
               const errors = validationResult(req);
               if (!errors.isEmpty()) {
                      return res.status(400).json({ errors: errors.array() });
@@ -27,12 +46,22 @@ router.post('/login',
        body("password", "minimo caracteres 6 para la contraseña")
               .trim()
               .isLength({ min: 6 }),
-       (req, res) => {
-              const errors = validationResult(req);
-              if (!errors.isEmpty()) {
-                     return res.status(400).json({ errors: errors.array() });
+       async (req, res) => {
+
+              try {
+                     const { email, password } = req.body
+
+                     let user = await User.findOne({ email });
+                     if (!user) return res.status(400).json({ error: "no existe este usuario" });
+                     const errors = validationResult(req);
+                     if (!errors.isEmpty()) {
+                            return res.status(403).json({ errors: errors.array() });
+                     }
+                     res.json({ ok: "inicio de sesion exitoso" });
+              } catch (error) {
+                     console.log(error);
+                     return res.status(500).json({error: "error de servidor"})
               }
-              res.json({ ok: "tambien funcionando" });
        })
 
 module.exports = router;

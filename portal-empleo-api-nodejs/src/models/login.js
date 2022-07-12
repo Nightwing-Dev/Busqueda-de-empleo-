@@ -1,12 +1,12 @@
 const mongoose = require("mongoose");
-const bcrypt = require('bcryptjs')
+const bcryptjs = require('bcryptjs')
 const UserSchema = mongoose.Schema({
 
     email: {
         type: String,
         required: true,
-        trim: true, 
-        lowercase: true, 
+        trim: true,
+        lowercase: true,
         unique: true
     },
     password: {
@@ -15,14 +15,19 @@ const UserSchema = mongoose.Schema({
     }
 });
 
-UserSchema.pre("save", async function(next){
- const user = this
-  try {
-    const salt = await bcrypt.hash(10)
-     bcryptjs.hash(user.password)
-  } catch (error) {
+UserSchema.pre("save", async function (next) {
+    const user = this;
+
+    if (!user.isModified('password')) return next()
     
-  }
+    try {
+        const salt = await bcryptjs.genSalt(10)
+        user.password = await bcryptjs.hash(user.password, salt)
+        next()
+    } catch (error) {
+        console.log(error)
+        throw new Error('fallo el hash de password')
+    }
 })
 
 module.exports = mongoose.model('User', UserSchema);
