@@ -9,4 +9,10 @@ router.post('/jobOffers', (req, res) => {
             ({ message: error }));
 });
 
+router.get('/')
+
+router.put('/')
+
+router.delete('/')
+
 module.exports = router;

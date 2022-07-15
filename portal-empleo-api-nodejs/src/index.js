@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const authLoginRegister = require('./routes/auth');
 const jobOffersRoutes = require('./routes/jobOffers');
+const registerRoutes = require('./routes/register')
 
 //variables funcionamiento
 const app = express();
@@ -9,7 +10,7 @@ const port = process.env.PORT || 9000;
 
 //middlewares
 app.use(express.json());
-app.use("/", authLoginRegister, jobOffersRoutes);
+app.use("/", authLoginRegister, jobOffersRoutes, registerRoutes);
 
 //conexion de mongodb
 mongoose

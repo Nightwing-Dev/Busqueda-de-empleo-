@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const registerSchema = mongoose.Schema({
+const registerCurriculumSchema = mongoose.Schema({
 
     cedula: { type: Number, required: true },
     email: { type: String, required: true, trim: true, lowercase: true, unique: true},
@@ -14,4 +14,4 @@ const registerSchema = mongoose.Schema({
     avatar: { type: String, required: true }
 });
 
-module.exports = mongoose.model('register', registerSchema);
+module.exports = mongoose.model('register', registerCurriculumSchema);

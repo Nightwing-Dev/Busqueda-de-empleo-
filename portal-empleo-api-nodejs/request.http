@@ -3,8 +3,8 @@ POST http://localhost:9000/register HTTP/1.1
 Content-Type: application/json
 
    {
-    "email":"kass@gmail.com",
-    "password":"borntodie123"
+    "email":"patasderana@hotmail.com",
+    "password":"usuarioprueba1234"
    }
 
 
@@ -13,20 +13,23 @@ POST http://localhost:9000/login HTTP/1.1
 Content-Type: application/json
 
 {
-    "email":"kass@gmail.com",
-    "password":"borntodie1234"
+    "email":"patasderana@hotmail.com",
+    "password":"usuarioprueba1234"
 }
 
 ###
-POST http://localhost:9000/api/jobOffers HTTP/1.1
+POST http://localhost:9000/jobOffers HTTP/1.1
 Content-Type: application/json
 
 {
 
-    "title": "desarrollador frontend",
-    "company":" Mazda Inc" ,
-    "salary":"200",
-    "location":"Francia",
-    "companyImage":"imagen.mazda.jpg", 
+    "title": "Reclutamiento it Senior",
+    "company":"Accenture" ,
+    "salary":"400",
+    "location":"Spain",
+    "companyImage":"Accenture.jpg", 
     "time": ""
 }
+
+### 
+GET http://localhost:9000/jobOffers HTTP/1.1
