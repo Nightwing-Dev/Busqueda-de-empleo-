@@ -1,46 +1,81 @@
+//REGISTRO DEL USUARIO
+
 ###
 POST http://localhost:9000/register HTTP/1.1
 Content-Type: application/json
 
    {
-    "email":"lanadelrey12@hotmail.com",
-    "password":"lana12rey"
+    "email":"cherryy@hotmail.com",
+    "password":"cherry12345"
    }
 
+//LOGIN DEL USUARIO YA CREADO
 
 ###
 POST http://localhost:9000/login HTTP/1.1
 Content-Type: application/json
 
 {
-    "email":"lanadelrey12@hotmail.com",
-    "password":"lana12rey"
+    "email":"cherryy@hotmail.com",
+    "password":"cherry12345"
 }
+
+//REGISTRAR TRABAJOS
 
 ###
 POST http://localhost:9000/jobOffers HTTP/1.1
 Content-Type: application/json
 
 {
-    "title": "Recluiter Talent Adquisition",
-    "company":"BairesDev" ,
-    "salary":"100",
-    "location":"Chile",
-    "companyImage":"BairesDev.jpg"
+    "title": "Bailarina de ballet",
+    "company":"Ballet inc" ,
+    "salary":"500",
+    "location":"Estados Unidos",
+    "companyImage":"bailarina.jpg"
 }
+
+//VER TODOS LOS TRABAJOS CREADOS Y DISPONIBLES
 
 ### 
 GET http://localhost:9000/jobOffers HTTP/1.1
 
-DELETE 
-
-PUT 
-
-//get por id 
+//FILTRAR POR ID 
 ###
-GET http://localhost:9000/jobOffers/62d1f4364f1ff55078ca88d2 HTTP/1.1
+GET http://localhost:9000/jobOffers/62d34f46356b829c015db246 HTTP/1.1
 Content-Type: application/json
 
+
+// ELIMINAR POR ID 
 ###
-DELETE http://localhost:9000/jobOffers/62d1f4364f1ff55078ca88d2 HTTP/1.1
+DELETE http://localhost:9000/jobOffers/62d34f03356b829c015db240 HTTP/1.1
 Content-Type: application/json
+
+//ACTUALIZAR POR ID 
+###
+PATCH http://localhost:9000/jobOffers/62d34f46356b829c015db246 HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "bailarina de antro",
+    "salary": "100",
+    "location": "Mexico city"
+}
+
+//Crear REgistro DE CURRICULUM 
+###
+POST http://localhost:9000/registerCurri HTTP/1.1
+Content-Type: application/json
+
+{
+    "cedula":"",
+    "email":"",
+    "password":"",
+    "name":"",
+    "last_name":"",
+    "age":"",
+    "lastJob":"",
+    "phoneNumber":"",
+    "avatar":"",
+    "university":"",
+    "career":""
+}

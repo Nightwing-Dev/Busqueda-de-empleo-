@@ -1,5 +1,4 @@
 const express = require("express");
-const jobOffers = require("../models/jobOffers");
 const jobOffersSchema = require("../models/jobOffers")
 const router = express.Router();
 
@@ -56,7 +55,21 @@ router.delete('/jobOffers/:_id', async (req, res) => {
     }
 })
 
-router.put('/')
+router.patch('/jobOffers/:_id', async (req, res) => {
+    try {
+        const updateJobs = await jobOffersSchema.updateOne({ _id: req.params._id }, {
+            $set: {
+                title: req.body.title,
+                salary: req.body.salary,
+                location: req.body.location
+            }
+        });
+        res.json(updateJobs);
+    } catch (error) {
+        res.json({ message: error });
+    }
+})
+
 
 
 module.exports = router;
