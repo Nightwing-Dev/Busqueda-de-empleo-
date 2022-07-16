@@ -36,3 +36,17 @@
               res.json({ ok: "funcionando" });
        });
 */
+
+
+//componente routes...
+
+//joboffers
+
+/*
+router.post('/jobOffers', (req, res) => {
+    const jobOffers = jobOffersSchema(req.body);
+    jobOffers.save().then((data) =>
+        res.json(data)).catch((error) => res.json
+            ({ message: error }));
+});
+*/
