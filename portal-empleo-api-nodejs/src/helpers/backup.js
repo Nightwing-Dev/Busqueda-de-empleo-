@@ -50,3 +50,11 @@ router.post('/jobOffers', (req, res) => {
             ({ message: error }));
 });
 */
+
+//version 1 router get...
+/*router.get('/jobOffers', (req, res) => {
+    db.collection('joboffers').find().toArray()
+        .then(results => {
+            res.json(results);
+        }).catch(error => console.error(error));
+})*/

@@ -1,4 +1,5 @@
 const express = require("express");
+const jobOffers = require("../models/jobOffers");
 const jobOffersSchema = require("../models/jobOffers")
 const router = express.Router();
 
@@ -39,22 +40,23 @@ router.post('/jobOffers', async (req, res) => {
 router.get('/jobOffers/:_id', async (req, res) => {
     try {
         const jobOffers = await jobOffersSchema.findById(req.params._id);
-        res.json(jobOffers)
+        res.json(jobOffers);
     } catch (error) {
         res.json({ message: error });
     }
 });
 
-//version 1 router get...
-/*router.get('/jobOffers', (req, res) => {
-    db.collection('joboffers').find().toArray()
-        .then(results => {
-            res.json(results);
-        }).catch(error => console.error(error));
-})*/
+
+router.delete('/jobOffers/:_id', async (req, res) => {
+    try {
+        const removeJobs = await jobOffersSchema.deleteOne({ _id: req.params._id });
+        res.json(removeJobs);
+    } catch (error) {
+        res.json({ message: error });
+    }
+})
 
 router.put('/')
 
-router.delete('/')
 
 module.exports = router;
