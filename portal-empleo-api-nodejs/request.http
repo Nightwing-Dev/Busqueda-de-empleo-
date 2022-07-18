@@ -1,5 +1,4 @@
 //REGISTRO DEL USUARIO
-
 ###
 POST http://localhost:9000/register HTTP/1.1
 Content-Type: application/json
@@ -10,7 +9,6 @@ Content-Type: application/json
    }
 
 //LOGIN DEL USUARIO YA CREADO
-
 ###
 POST http://localhost:9000/login HTTP/1.1
 Content-Type: application/json
@@ -21,7 +19,6 @@ Content-Type: application/json
 }
 
 //REGISTRAR TRABAJOS
-
 ###
 POST http://localhost:9000/jobOffers HTTP/1.1
 Content-Type: application/json
@@ -35,7 +32,6 @@ Content-Type: application/json
 }
 
 //VER TODOS LOS TRABAJOS CREADOS Y DISPONIBLES
-
 ### 
 GET http://localhost:9000/jobOffers HTTP/1.1
 
@@ -67,15 +63,26 @@ POST http://localhost:9000/registerCurri HTTP/1.1
 Content-Type: application/json
 
 {
-    "cedula":"",
-    "email":"",
-    "password":"",
-    "name":"",
-    "last_name":"",
-    "age":"",
-    "lastJob":"",
-    "phoneNumber":"",
-    "avatar":"",
-    "university":"",
-    "career":""
+    "cedula":"1152692345",
+    "name":"Diego Aleman",
+    "lastName":"Peruano Xoximilco",
+    "age":"28",
+    "lastJob":"Jugador de videojuegos",
+    "phoneNumber":"3127421351",
+    "avatar":"diegoaleman.png",
+    "university":"Zenita",
+    "exp":"0"
 }
+
+###
+PATCH http://localhost:9000/registerCurri HTTP/1.1
+Content-Type: application/json 
+
+###
+GET http://localhost:900/postulados HTTP/1.1
+Content-Type: application/json
+
+GET http://localhost:9000/postulados/ HTTP/1.1
+Content-Type: application/json
+
+

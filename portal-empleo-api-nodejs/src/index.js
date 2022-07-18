@@ -1,8 +1,9 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const authLoginRegister = require('./routes/auth');
+const authLoginRegister = require('./routes/login');
 const jobOffersRoutes = require('./routes/jobOffers');
-const registerRoutes = require('./routes/register')
+const registerRoutes = require('./routes/register');
+const registerCurriRoutes = require('./routes/registerCurri')
 
 //variables funcionamiento
 const app = express();
@@ -10,7 +11,11 @@ const port = process.env.PORT || 9000;
 
 //middlewares
 app.use(express.json());
-app.use("/", authLoginRegister, jobOffersRoutes, registerRoutes);
+app.use("/",
+    authLoginRegister,
+    jobOffersRoutes,
+    registerRoutes,
+    registerCurriRoutes);
 
 //conexion de mongodb
 mongoose
