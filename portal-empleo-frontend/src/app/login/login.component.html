@@ -1,28 +1,38 @@
-
 <img class="wave" src="../../assets/wave.png">
 <div class="container">
-    <div >
+    <div>
         <img src="../../assets/employeer.png" class="img-emplo">
     </div>
     <div class="login-content">
-        <form action="index.html">
+        <form action="index.html" (ngSubmit)="login()" [formGroup]="loginForm">
             <img src="../../assets/eje.jpg" class="custom">
             <h2 class="title">Bienvenido</h2>
-               <div class="input-div one">
-                  <div class="i">
-                          <i class="fas fa-user"></i>
-                  </div>
-                  <div class="div">
-                          <input type="text" class="input" placeholder="Escribe tu usuario">
-                  </div>
-               </div>
-               <div class="input-div pass">
-                  <div class="i"> 
-                       <i class="fas fa-lock"></i>
-                  </div>
-                  <div class="div">
-                       <input type="password" class="input" placeholder="Escribe tu contraseña">
-               </div>
+            <div class="input-div one">
+                <div class="i">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="div">
+                    <input type="email" class="input" name="email"
+                        placeholder="Escribe tu usuario" required formControlName="email" [email]="true">
+                    <div *ngIf="loginForm.get('email')?.touched && loginForm.get('email')?.errors?.['email']"
+                        class="validators">* Escribe un formato de correo valido *</div>
+                    <div *ngIf="loginForm.get('email')?.touched && loginForm.get('email')?.errors?.['required']"
+                        class="validators">* Email es requerido*</div>
+                </div>
+            </div>
+            <div class="input-div pass">
+                <div class="i">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <div class="div">
+                    <input type="password" class="input" placeholder="Escribe tu contraseña" required
+                        formControlName="password" required minlength="6">
+                    <div *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.errors?.['required']"
+                        class="validators">* password es requerida *</div>
+                    <div *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.errors?.['minlength']"
+                        class="validators">* Minimo de caracteres permitidos 6 *</div>
+
+                </div>
             </div>
             <a href="#" class="forgotpass">Contraseña olvidada?</a>
             <input type="submit" class="btn" value="Iniciar Sesion">
