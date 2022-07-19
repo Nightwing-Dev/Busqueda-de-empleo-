@@ -1,4 +1,4 @@
-<img class="wave" src="../../assets/wave.png">
+<img class="wave" src="../../assets/wave(9).png">
 <div class="container">
     <div>
         <img src="../../assets/employeer.png" class="img-emplo">
@@ -12,8 +12,8 @@
                     <i class="fas fa-user"></i>
                 </div>
                 <div class="div">
-                    <input type="email" class="input" name="email"
-                        placeholder="Escribe tu usuario" required formControlName="email" [email]="true">
+                    <input type="email" class="input" name="email" placeholder="Escribe tu usuario" required
+                        formControlName="email" [email]="true">
                     <div *ngIf="loginForm.get('email')?.touched && loginForm.get('email')?.errors?.['email']"
                         class="validators">* Escribe un formato de correo valido *</div>
                     <div *ngIf="loginForm.get('email')?.touched && loginForm.get('email')?.errors?.['required']"
@@ -28,14 +28,14 @@
                     <input type="password" class="input" placeholder="Escribe tu contraseña" required
                         formControlName="password" required minlength="6">
                     <div *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.errors?.['required']"
-                        class="validators">* password es requerida *</div>
+                        class="validators">* contraseña es requerida *</div>
                     <div *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.errors?.['minlength']"
                         class="validators">* Minimo de caracteres permitidos 6 *</div>
-
                 </div>
             </div>
-            <a href="#" class="forgotpass">Contraseña olvidada?</a>
-            <input type="submit" class="btn" value="Iniciar Sesion">
+                <a href="#" class="forgotpass">No tienes Cuenta, Registrate?</a>
+                <input type="submit" class="btn" [disabled]="loginForm.invalid" value="Iniciar Sesión">
+                <a href="#" class="forgotpass">Contraseña olvidada?</a>
         </form>
     </div>
 </div>
