@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
           console.log(this.loginForm.value)
           this.router.navigate(['navbar'])
         }, (err: Error) => {
-          alert(err.message)
+          alert(err.message);
         }
       );
     }
@@ -40,5 +40,9 @@ export class LoginComponent implements OnInit {
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(8)]],
     })
+  }
+
+  clickRegister(){
+    this.router.navigate(['register'])
   }
 }
