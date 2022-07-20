@@ -23,12 +23,12 @@ export class RegisterComponent implements OnInit {
     password: new FormControl('')
   });
 
-  login() {
+  register() {
     if (this.registerForm.valid) {
-      this.userSvc.login(this.registerForm.value).subscribe(
+      this.userSvc.register(this.registerForm.value).subscribe(
         (res) => {
           console.log(this.registerForm.value)
-          this.router.navigate(['navbar'])
+          this.router.navigate(['login'])
         }, (err: Error) => {
           alert(err.message)
         }

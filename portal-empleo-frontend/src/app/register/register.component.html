@@ -22,7 +22,7 @@
                     <h1 class="mb-4 text-2xl font-bold text-center text-gray-700 hover:text-teal-800">
                         ⁃⁃⁃ Registrate ⁃⁃⁃
                     </h1>
-                    <form (ngSubmit)="login()" [formGroup]="registerForm">
+                    <form (ngSubmit)="register()" [formGroup]="registerForm">
                         <div class="mt-4">
                             <label class="block text-sm">
                                 Email
@@ -54,7 +54,6 @@
                             [disabled]="registerForm.invalid">
                             Empieza ahora
                         </button>
-
                         <div class="mt-4 text-center">
                             <p class="text-sm ">Ya tienes cuenta?, Logueate! <a href="/login"
                                     class="text-blue-600 hover:underline">
