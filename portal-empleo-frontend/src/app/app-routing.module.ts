@@ -12,7 +12,8 @@ const routes: Routes = [
   { path: 'main', component: MainComponent },
   { path: '', redirectTo: '/main', pathMatch: 'full' },
   { path: 'register', component: RegisterComponent },
-  { path: 'offers', component: OffersComponent }
+  { path: 'offers', component: OffersComponent },
+  { path: 'create-offers', loadChildren: () => import('./create-offers/create-offers.module').then(m => m.CreateOffersModule) }
 
 ];
 

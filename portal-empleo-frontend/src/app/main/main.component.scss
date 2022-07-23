@@ -4,11 +4,9 @@ $border-radius-size: 14px;
 $recluiter: #02147d;
 $empleado: #474646;
 
-.mainheader{
-background: url('../../assets/city.jpg');
-background-repeat: repeat-y;
-align-self: center;
-
+.mainheader {
+    position: relative;
+    z-index: 0;
 }
 
 .container {
@@ -18,13 +16,14 @@ align-self: center;
     grid-template-columns: 400px 400px;
     width: 800px;
     text-align: center;
-    
+
 }
 
 .wrapper {
     padding-top: 40px;
     padding-bottom: 40px;
     transition: transform 250ms;
+
     &:focus {
         outline: 0;
     }
@@ -40,10 +39,10 @@ align-self: center;
     text-align: center;
     box-shadow: -1px 15px 30px -12px black;
     z-index: 9999;
-    
+
 }
 
-.wrapper:hover{
+.wrapper:hover {
     transform: translateY(-20px);
 }
 
