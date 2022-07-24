@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
       this.auth.login(this.loginForm.value).subscribe(
         (res) => {
           console.log(this.loginForm.value)
-          this.router.navigate(['offers'])
+          this.router.navigate(['video'])
         }, (err: Error) => {
           alert(err.message);
         }

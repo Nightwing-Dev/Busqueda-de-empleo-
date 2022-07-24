@@ -10,8 +10,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RegisterComponent } from './register/register.component';
 import { OffersComponent } from './offers/offers.component';
-import { CreateOffersComponent } from './create-offers/create-offers.component';
-import { RComponent } from './r/r.component';
+import { VideoComponent } from './video/video.component';
+
+
 
 
 @NgModule({
@@ -22,8 +23,7 @@ import { RComponent } from './r/r.component';
     LoginComponent,
     RegisterComponent,
     OffersComponent,
-    CreateOffersComponent,
-    RComponent,
+    VideoComponent,
   ],
   imports: [
     BrowserModule,

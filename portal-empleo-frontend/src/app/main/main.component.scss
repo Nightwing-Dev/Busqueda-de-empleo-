@@ -5,8 +5,11 @@ $recluiter: #02147d;
 $empleado: #474646;
 
 .mainheader {
-    position: relative;
-    z-index: 0;
+    background-image: url("../../assets/wave.png");
+    z-index: -1;
+    text-align: center;
+    width: 100%;
+    background-repeat: no-repeat;
 }
 
 .container {
