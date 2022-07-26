@@ -24,7 +24,8 @@ router.post('/jobOffers', async (req, res) => {
         salary: req.body.salary,
         location: req.body.location,
         companyImage: req.body.location,
-        createdAt: req.body.createdAt
+        workingDate: req.body.workingDate,
+        createAt: req.body.createAt
     });
 
     try {

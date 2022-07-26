@@ -28,7 +28,9 @@ Content-Type: application/json
     "company":"Ballet inc" ,
     "salary":"500",
     "location":"Estados Unidos",
-    "companyImage":"bailarina.jpg"
+    "companyImage":"bailarina.jpg",
+    "workingDate":"fulltime",
+    "createdAt":""
 }
 
 //VER TODOS LOS TRABAJOS CREADOS Y DISPONIBLES

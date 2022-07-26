@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const jobOffersSchema = mongoose.Schema({
-    
+
 
     title: {
         type: String,
@@ -23,8 +23,12 @@ const jobOffersSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    createdAt : 
-    { type : Date, default: Date.now, },
+    workingDate: {
+        type: String,
+        required: true
+    },
+    createdAt:
+        { type: Date, default: Date.now, },
 });
 
 module.exports = mongoose.model('jobOffers', jobOffersSchema);
