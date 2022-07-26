@@ -24,8 +24,8 @@ POST http://localhost:9000/jobOffers HTTP/1.1
 Content-Type: application/json
 
 {
-    "title": "Bailarina de ballet",
-    "company":"Ballet inc" ,
+    "title": "Psicologa organizacional",
+    "descriptionCompany":"importante empresa del sector it necesita una mujer con ganas de ganar pasta" ,
     "salary":"500",
     "location":"Estados Unidos",
     "companyImage":"bailarina.jpg",

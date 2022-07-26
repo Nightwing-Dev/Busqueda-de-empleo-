@@ -20,7 +20,7 @@ router.post('/jobOffers', async (req, res) => {
 
     const jobOffers = new jobOffersSchema({
         title: req.body.title,
-        company: req.body.company,
+        descriptionCompany: req.body.descriptionCompany,
         salary: req.body.salary,
         location: req.body.location,
         companyImage: req.body.location,

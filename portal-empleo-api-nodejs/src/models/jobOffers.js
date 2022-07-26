@@ -7,7 +7,7 @@ const jobOffersSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    company: {
+    descriptionCompany: {
         type: String,
         required: true
     },

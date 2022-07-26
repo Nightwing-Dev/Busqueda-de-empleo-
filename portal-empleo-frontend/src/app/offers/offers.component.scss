@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Dancing+Script&display=swap');
+
 
 * {
   outline: none;
@@ -25,9 +27,16 @@
 }
 
 
+.title-portal {
+  text-align: center;
+  font-size: 60px;
+  font-family: 'Black Han Sans', sans-serif;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  color: #2225f2c7;
+}
 
-
-.bg-sky-900{
+.bg-sky-900 {
   opacity: 0.7;
 }
 
@@ -35,7 +44,12 @@
   display: grid;
   padding: -2px;
   margin-left: 320px;
-  
+
+}
+
+
+.img-1 {
+  border-radius: 6px;
 }
 
 .wrapper {
@@ -54,7 +68,7 @@
 
 .block {
   text-align: center;
-  
+
 }
 
 hr {
@@ -76,23 +90,23 @@ body {
 }
 
 
-  .search.item {
+.search.item {
+  color: #2f2f33;
+  border-color: #2f2f33;
+}
+
+.search-location,
+.search-job,
+.search-salary {
+  svg {
     color: #2f2f33;
-    border-color:#2f2f33;
   }
+}
 
-  .search-location,
-  .search-job,
-  .search-salary {
-    svg {
-      color: #2f2f33;
-    }
-  }
-
-  .detail-button {
-    background-color: #f0f0f0;
-    color: #83838e;
-  }
+.detail-button {
+  background-color: #f0f0f0;
+  color: #83838e;
+}
 
 
 .job {
@@ -177,6 +191,7 @@ body {
   border-radius: 8px;
   width: 100%;
   padding-left: 20px;
+  filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.7));
 
   div:not(:last-of-type) {
     border-right: 3px solid #efefef;
@@ -198,7 +213,7 @@ body {
     background-repeat: no-repeat;
     background-size: 14px;
     background-position: 0 50%;
-    padding: 0 25px 0 305px;
+    padding: 25px;
   }
 }
 
@@ -231,7 +246,7 @@ body {
 
 .search-button {
   background-color: rgb(88, 88, 235);
-  height: 55px;
+  height: 57px;
   border: none;
   font-weight: 600;
   font-size: 14px;
@@ -279,21 +294,24 @@ body {
 }
 
 .alert {
-  background-color: #e8f2ff;
+  background-color: #ffffff;
   padding: 24px 18px;
   border-radius: 8px;
 
   &-title {
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 500;
     margin-bottom: 8px;
+    text-align: center;
+    font-weight: bold;
   }
 
   &-subtitle {
     font-size: 13px;
-    color: #83838e;
+    color: #7b7b83;
     line-height: 1.6em;
     margin-bottom: 20px;
+    text-align: center;
   }
 
   input {
@@ -301,9 +319,10 @@ body {
     padding: 10px;
     display: block;
     border-radius: 6px;
-    background-color: #fff;
-    border: none;
+    background-color: rgb(232, 230, 230);
+    border: 3px;
     font-size: 13px;
+    text-align: center;
   }
 }
 
@@ -316,6 +335,9 @@ body {
   font-size: 13px;
   font-weight: 600;
   margin-top: 14px;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
 }
 
 .job-wrapper {
@@ -324,6 +346,11 @@ body {
 
 .job-time {
   padding-top: 20px;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 15px;
+
 
   &-title {
     font-size: 14px;
@@ -363,7 +390,7 @@ body {
   background-color: white;
   border-radius: 4px;
   cursor: pointer;
-  
+
 }
 
 .job-style:checked+label:before {
