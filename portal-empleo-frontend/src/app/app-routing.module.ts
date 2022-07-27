@@ -1,9 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { LoginRecluiterComponent } from './login-recluiter/login-recluiter.component';
 import { LoginComponent } from './login/login.component';
 import { MainComponent } from './main/main.component';
+import { NavbarRecluiterComponent } from './navbar-recluiter/navbar-recluiter.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { OffersComponent } from './offers/offers.component';
+import { RegisterRecluiterComponent } from './register-recluiter/register-recluiter.component';
 import { RegisterComponent } from './register/register.component';
 import { VideoComponent } from './video/video.component';
 
@@ -15,7 +18,10 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'offers', component: OffersComponent },
   { path: 'create-offers', loadChildren: () => import('./create-offers/create-offers.module').then(m => m.CreateOffersModule) },
-  { path: 'video', component: VideoComponent }
+  { path: 'video', component: VideoComponent },
+  { path: 'login-recluiter', component: LoginRecluiterComponent },
+  { path: 'register-recluiter', component: RegisterRecluiterComponent },
+  
 
 ];
 

@@ -12,6 +12,9 @@ import { RegisterComponent } from './register/register.component';
 import { OffersComponent } from './offers/offers.component';
 import { VideoComponent } from './video/video.component';
 import { FilterPipe } from './pipes/filter.pipe';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { LoginRecluiterComponent } from './login-recluiter/login-recluiter.component';
+import { RegisterRecluiterComponent } from './register-recluiter/register-recluiter.component';
 
 
 
@@ -26,13 +29,17 @@ import { FilterPipe } from './pipes/filter.pipe';
     OffersComponent,
     VideoComponent,
     FilterPipe,
+    LoginRecluiterComponent,
+    RegisterRecluiterComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

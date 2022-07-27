@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700,900');
 
 $border-radius-size: 14px;
-$recluiter: #02147d;
+$recluiter: #05104d;
 $empleado: #474646;
 
 .mainheader {
@@ -33,14 +33,14 @@ $empleado: #474646;
 }
 
 .portal-card {
-    background: white;
+    background: rgb(255, 255, 255);
     width: 300px;
     display: inline-block;
     margin: auto;
     border-radius: $border-radius-size + 5;
     position: relative;
     text-align: center;
-    box-shadow: -1px 15px 30px -12px black;
+    box-shadow: -1px 15px 30px -12px rgb(0, 0, 0);
     z-index: 9999;
 
 }
@@ -97,7 +97,7 @@ $empleado: #474646;
 
 .portal-card__unit-name {
     font-size: 26px;
-    color: black;
+    color: rgb(12, 12, 12);
     font-weight: 900;
     margin-bottom: 5px;
     cursor: pointer;
@@ -113,7 +113,7 @@ $empleado: #474646;
     background: $recluiter;
 
     .one-third {
-        border-right: 2px solid #000000;
+        border-right: 2px solid #ffffff;
     }
 }
 
@@ -121,7 +121,7 @@ $empleado: #474646;
     background: $empleado;
 
     .one-third {
-        border-right: 2px solid #000000;
+        border-right: 2px solid #ffffff;
     }
 }
 

@@ -24,13 +24,13 @@ POST http://localhost:9000/jobOffers HTTP/1.1
 Content-Type: application/json
 
 {
-    "title": "Cajero En Centro Comercial Unicentro",
-    "descriptionCompany":"En jumbo estamos reclutando personal para servir de cajero en nuestras tiendas comerciales, necesitamos que tenga excelente actitud y tenga disponibilidad" ,
-    "salary":"100",
-    "location":"Medellin",
+    "title": "Delivery Uber Eats",
+    "descriptionCompany":"Nos complace ayudar, somos parte del grupo uber, el cual brinda oportunidades a diferentes tipos de personas. en este dia nos encontramos en la necesidad de buscar un delivery el cual cuente con vehiculo propio y se pueda integrar rapidamente " ,
+    "salary":"200",
+    "location":"Argentina",
     "companyImage":"https://i.ibb.co/McZXsGJ/jumbo-logo-bulevar.png",
-    "workingDate":"Tiempo Completo",
-    "experience":"1",
+    "workingDate":"Media Jornada",
+    "experience":"2",
     "createdAt":""
 }
 
@@ -40,7 +40,7 @@ GET http://localhost:9000/jobOffers HTTP/1.1
 
 //FILTRAR POR ID 
 ###
-GET http://localhost:9000/jobOffers/62e08c9fef754ab056aeb969 HTTP/1.1
+GET http://localhost:9000/jobOffers/62e0a34786bc2a05f5a3d998 HTTP/1.1
 Content-Type: application/json
 
 
@@ -51,12 +51,12 @@ Content-Type: application/json
 
 //ACTUALIZAR POR ID 
 ###
-PATCH http://localhost:9000/jobOffers/62e08e2686bc2a05f5a3d91c HTTP/1.1
+PATCH http://localhost:9000/jobOffers/62e0a34786bc2a05f5a3d998 HTTP/1.1
 Content-Type: application/json
 
 {
     
-    "descriptionCompany":"Importante empresa del sector inmobiliario, requiere para su equipo un experimentado agente de ventas de inmobiliarios. Animate a participar ahora, estamos reclutando ya mismo"
+    "title":"Delivery Didi Food"
 
 }
 

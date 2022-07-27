@@ -10,7 +10,8 @@ import { JobsService } from '../services/jobs.service';
   styleUrls: ['./offers.component.scss']
 })
 export class OffersComponent implements OnInit {
-
+  
+  pages: number = 1;
   job!: Jobs[];
 
   constructor(private jobsSvc: JobsService) { }

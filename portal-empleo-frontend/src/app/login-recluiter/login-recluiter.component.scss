@@ -1,10 +1,8 @@
 
-
 body{
     font-family: 'Poppins', sans-serif;
     overflow: hidden;
 }
-
 
 .wave{
 	position: fixed;
@@ -33,10 +31,13 @@ body{
 }
 
 .title{
+    font-size: 25px;
    font-weight: bold;
+   
 }
 
 .forgotpass{
+    margin-top: 20px;
     font-weight: bold;
     text-align: center;
 }
@@ -94,16 +95,11 @@ form{
 	font-family: 'Poppins', sans-serif;
 }
 
-
-.custom-div{
-    width: 230px;
-    padding-left: 40px;
-}
-
 .custom{
     width:200px;
-    height:300px;
     border-radius: 160px;
+    margin-left: 75px;
+    margin: 20px;
    // border:4px solid rgb(26, 194, 127);
     filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7)); 
 }
@@ -122,10 +118,16 @@ form{
 img, video {
     max-width: 170%;
     height: 100%;
-    margin-right: 0;
-    padding: 0 2;
+    margin-right: 4px;
+    padding: 0 5;
     
   }
+
+
+.custom-div{
+    width: 200px;
+    padding-left: 40px;
+}
 
 .input-div:before, .input-div:after{
 	content: '';
@@ -204,7 +206,7 @@ a:hover{
 	border-radius: 25px;
 	outline: none;
 	border: none;
-	background-image: linear-gradient(to right, #3239be, #38d39f, #32be8f);
+	background-image: linear-gradient(to right, #700aa4, #9fcbef, #0b589f);
 	background-size: 200%;
 	font-size: 1.2rem;
 	color: #fff;

@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+
+.title-portal {
+    text-align: left;
+    font-family: Arial Black;
+    font-size: 18px;
+    background: #02411e;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
+    margin-left: -25%;
+    font-family: 'Dancing Script', cursive;
+    letter-spacing: 0.22em
+}
+
+element {
+    margin-left: -16%;
+  }
+
+  .bg-cyan-900{
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7)); 
+  }

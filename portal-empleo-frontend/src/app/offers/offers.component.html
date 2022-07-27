@@ -320,7 +320,10 @@
         <div class="searched-bar">
           <div class="searched-show">Mostrando 20 Trabajos</div>
         </div>
-        <div *ngFor="let jobs of job">
+        <br>
+        
+        <div class="pagination" *ngFor="let jobs of job | paginate: { itemsPerPage: 5, currentPage: pages }">
+          
           <div class="job-cards">
             <div class="job-card">
               <div class="job-card-header">
@@ -346,4 +349,6 @@
       </div>
     </div>
   </div>
+  
 </div>
+<pagination-controls (pageChange)="pages = $event"></pagination-controls>

@@ -15,6 +15,9 @@ export class MainComponent implements OnInit {
   }
   
   onClick(){
-   this.router.navigate(['login'])
+   this.router.navigate(['login']);
+  }
+  onClickRecluiter(){
+    this.router.navigate(['login-recluiter']);
   }
 }

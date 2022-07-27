@@ -1,15 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
 
-
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  selector: 'app-login-recluiter',
+  templateUrl: './login-recluiter.component.html',
+  styleUrls: ['./login-recluiter.component.scss']
 })
-export class LoginComponent implements OnInit {
+export class LoginRecluiterComponent implements OnInit {
 
   constructor(private readonly router: Router,
     public auth: AuthService,
@@ -28,7 +27,7 @@ export class LoginComponent implements OnInit {
       this.auth.login(this.loginForm.value).subscribe(
         (res) => {
           console.log(this.loginForm.value)
-          this.router.navigate(['video'])
+          this.router.navigate(['create-offers'])
         }, (err: Error) => {
           alert(err.message);
         }
@@ -44,7 +43,7 @@ export class LoginComponent implements OnInit {
   }
 
   clickRegister() {
-    this.router.navigate(['register'])
+    this.router.navigate(['register-recluiter'])
   }
   mostrarPass() {
     let x = (<HTMLInputElement>document.getElementById("inputContra"));
