@@ -61,8 +61,10 @@ router.patch('/jobOffers/:_id', async (req, res) => {
         const updateJobs = await jobOffersSchema.updateOne({ _id: req.params._id }, {
             $set: {
                 title: req.body.title,
+                descriptionCompany: req.body.descriptionCompany,
                 salary: req.body.salary,
-                location: req.body.location
+                location: req.body.location,
+                workingDate: req.body.workingDate
             }
         });
         res.json(updateJobs);

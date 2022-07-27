@@ -1,5 +1,6 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
+import { Jobs } from "../interfaces/jobs.interface";
 
 
 @Injectable({
@@ -11,7 +12,7 @@ export class JobsService{
     constructor(private http: HttpClient){}
     
      getJobs(){
-         return this.http.get("");
+         return this.http.get<any>("http://localhost:9000/jobOffers");
      }
 
      postJobs(){
