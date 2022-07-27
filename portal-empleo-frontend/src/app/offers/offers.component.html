@@ -320,75 +320,30 @@
         <div class="searched-bar">
           <div class="searched-show">Mostrando 20 Trabajos</div>
         </div>
-       <div *ngFor="let jobs of job">
-        <div class="job-cards">
-          <div class="job-card">
-            <div class="job-card-header">
-              <img src="../../assets/casa-barrio-los-colores-APA1652671550148294-260.jpg" width="60px" height="60px"
-                class="img-1">
-            </div>
-            <div class="job-card-title">{{jobs.title}}</div>
-            <div class="job-card-subtitle">
-              {{jobs.descriptionCompany}}
-            </div>
-            <div class="job-detail-buttons">
-              <button class="search-buttons detail-button">{{jobs.workingDate}}</button>
-              <button class="search-buttons detail-button">1 año exp</button>
-              <button class="search-buttons detail-button">Medellin</button>
-            </div>
-            <div class="job-card-buttons">
-              <button class="search-buttons card-buttons">Aplicar Ahora</button>
-              <button class="search-buttons card-buttons-msg">Enviar Mensaje</button>
-            </div>
-          </div>
-          <div class="job-card">
-            <div class="job-card-header">
-              <img src="../../assets/jumbo-logo-bulevar.png" width="60px" height="60px" class="img-1">
-              <div class="menu-dot"></div>
-            </div>
-            <div class="job-card-title">Cajero En Centro Comercial Jumbo</div>
-            <div class="job-card-subtitle">
-              En jumbo estamos reclutando personal para servir de cajero en nuestras tiendas comerciales,
-              necesitamos que tenga excelente actitud y tenga disponibilidad
-            </div>
-            <div class="job-detail-buttons">
-              <button class="search-buttons detail-button">Media Jornada</button>
-              <button class="search-buttons detail-button">1 año exp</button>
-              <button class="search-buttons detail-button">Bogota</button>
-            </div>
-            <div class="job-card-buttons">
-              <button class="search-buttons card-buttons">Aplicar ahora</button>
-              <button class="search-buttons card-buttons-msg">Enviar Mensaje</button>
-            </div>
-          </div>
-          <div class="job-card">
-            <div class="job-card-header">
-              <img src="../../assets/0f55e11982d01bf4385ab673fc54ccb4.jpg" width="70px" height="100px" class="img-1">
-              <div class="menu-dot"></div>
-            </div>
-            <div class="job-card-title">Data Ciencia Ingeniero</div>
-            <div class="job-card-subtitle">
-              Ibm esta en busquedad de un candidato el cual desempeñarse bien dentro del area de las ciencias
-              computacionales,
-              que posea alta habilidad y destreza para llevar a cabo sus funcionalidades
-            </div>
-            <div class="job-detail-buttons">
-              <button class="search-buttons detail-button">Tiempo Completo</button>
-              <button class="search-buttons detail-button">4 años exp</button>
-              <button class="search-buttons detail-button">Cartagena</button>
-            </div>
-            <div class="job-card-buttons">
-              <button class="search-buttons card-buttons">Aplicar Ahora</button>
-              <button class="search-buttons card-buttons-msg">Enviar Mensaje</button>
-            </div>
-          </div>
-          <div class="job-card">
-            <div class="job-card-header">
-              <div class="menu-dot"></div>
+        <div *ngFor="let jobs of job">
+          <div class="job-cards">
+            <div class="job-card">
+              <div class="job-card-header">
+                <img src="../../assets/Red and White Onfire Oil Gas Company Logo.png" width="100px" height="90px"
+                  class="img-1">
+              </div>
+              <div class="job-card-title">{{jobs.title}}</div>
+              <div class="job-card-subtitle">
+                {{jobs.descriptionCompany}}
+              </div>
+              <div class="job-detail-buttons">
+                <button class="search-buttons detail-button">{{jobs.workingDate}}</button>
+                <button class="search-buttons detail-button">{{jobs.experience}} años</button>
+                <button class="search-buttons detail-button">{{jobs.location}}</button>
+              </div>
+              <div class="job-card-buttons">
+                <button class="search-buttons card-buttons">Aplicar Ahora</button>
+                <button class="search-buttons card-buttons-msg">Enviar Mensaje</button>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div></div>
+</div>

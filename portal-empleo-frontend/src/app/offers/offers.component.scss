@@ -453,8 +453,10 @@ body {
 
 .job-cards {
   padding-top: 20px;
+  margin-left: 60px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  width: 650px;
+  //grid-template-columns: no-repeat(3, 1fr);
   grid-column-gap: 25px;
   grid-row-gap: 25px;
   animation: slideY .6s both;

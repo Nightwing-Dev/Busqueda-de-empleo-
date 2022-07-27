@@ -29,6 +29,7 @@ export class OffersComponent implements OnInit {
           location,
           companyImage,
           workingDate,
+          experience,
           createdAt }: Jobs) => {
           return {
             title: title,
@@ -37,6 +38,7 @@ export class OffersComponent implements OnInit {
             location: location,
             companyImage: companyImage,
             workingDate: workingDate,
+            experience: experience,
             createdAt: createdAt
           }
         });

@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { RegisterComponent } from './register/register.component';
 import { OffersComponent } from './offers/offers.component';
 import { VideoComponent } from './video/video.component';
+import { FilterPipe } from './pipes/filter.pipe';
 
 
 
@@ -24,6 +25,7 @@ import { VideoComponent } from './video/video.component';
     RegisterComponent,
     OffersComponent,
     VideoComponent,
+    FilterPipe,
   ],
   imports: [
     BrowserModule,
