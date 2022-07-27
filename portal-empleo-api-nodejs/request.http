@@ -24,12 +24,13 @@ POST http://localhost:9000/jobOffers HTTP/1.1
 Content-Type: application/json
 
 {
-    "title": "Animador de fiestas",
-    "descriptionCompany":"ven solo a hacer el ridiculo" ,
+    "title": "Agente Inmobiliario",
+    "descriptionCompany":"Importante empresa del sector inmobiliario, requiere para su equipo un experimentado agente de ventas de inmobiliarios" ,
     "salary":"200",
-    "location":"Canada",
-    "companyImage":"payaso.jpg",
+    "location":"Medellin",
+    "companyImage":"Agencia.jpg",
     "workingDate":"Tiempo Completo",
+    "experience":"1",
     "createdAt":""
 }
 
@@ -39,7 +40,7 @@ GET http://localhost:9000/jobOffers HTTP/1.1
 
 //FILTRAR POR ID 
 ###
-GET http://localhost:9000/jobOffers/62e06908e76f3645e0598b4c HTTP/1.1
+GET http://localhost:9000/jobOffers/62e08c9fef754ab056aeb969 HTTP/1.1
 Content-Type: application/json
 
 
@@ -50,15 +51,12 @@ Content-Type: application/json
 
 //ACTUALIZAR POR ID 
 ###
-PATCH http://localhost:9000/jobOffers/62e06908e76f3645e0598b4c HTTP/1.1
+PATCH http://localhost:9000/jobOffers/62e08e2686bc2a05f5a3d91c HTTP/1.1
 Content-Type: application/json
 
 {
-    "title": "bailarina de antro",
-    "salary": "100",
-    "location": "Mexico city",
-    "workingDate": "Remoto",
-    "descriptionCompany":"importante empresa"
+    
+    "experience":"2"
 
 }
 

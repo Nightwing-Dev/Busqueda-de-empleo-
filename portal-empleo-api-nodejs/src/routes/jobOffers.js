@@ -25,6 +25,7 @@ router.post('/jobOffers', async (req, res) => {
         location: req.body.location,
         companyImage: req.body.location,
         workingDate: req.body.workingDate,
+        experience: req.body.experience,
         createAt: req.body.createAt
     });
 
@@ -64,7 +65,8 @@ router.patch('/jobOffers/:_id', async (req, res) => {
                 descriptionCompany: req.body.descriptionCompany,
                 salary: req.body.salary,
                 location: req.body.location,
-                workingDate: req.body.workingDate
+                workingDate: req.body.workingDate,
+                experience: req.body.experience
             }
         });
         res.json(updateJobs);
