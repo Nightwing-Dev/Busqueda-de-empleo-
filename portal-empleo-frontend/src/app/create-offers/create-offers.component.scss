@@ -1,0 +1,35 @@
+element {
+  font-size: 21px;
+  line-height: 40px;
+  letter-spacing: 0.241em;
+  font-weight: 600;
+  padding: 60px;
+  margin-top: 30px;
+}
+
+
+.custom-title {
+  margin-top: 20px;
+  font-size: 400;
+  font-weight: bold;
+  text-align: center;
+}
+
+.container-vacancy {
+  margin-top: 27px;
+  display: flex;
+  padding-left: 240px;
+
+}
+
+.custom-img {
+  z-index: 1;
+  filter: none;
+}
+
+.wave{
+  z-index: -1;
+  position: absolute;
+  margin-left: -270px;
+  width: 476px;
+}
