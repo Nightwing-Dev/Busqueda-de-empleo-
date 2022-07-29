@@ -18,6 +18,28 @@ Content-Type: application/json
     "password":"cherry12345"
 }
 
+//registro de reclutadores
+###
+POST http://localhost:9000/registerRecluiter HTTP/1.1
+Content-Type: application/json
+   
+   {
+    "email":"recluiterkass@hotmail.com",
+    "password":"recluiter12345"
+   }
+
+
+//LOGIN DEL reclutador YA CREADO
+###
+POST http://localhost:9000/loginRecluiter HTTP/1.1
+Content-Type: application/json
+
+{
+    "email":"recluiterkass@hotmail.com",
+    "password":"recluiter12345"
+}
+
+
 //REGISTRAR TRABAJOS
 ###
 POST http://localhost:9000/jobOffers HTTP/1.1

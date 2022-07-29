@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AuthService } from '../services/auth.service';
+import { AuthRecluiterService } from '../services/auth-recluiter.service';
 
 @Component({
   selector: 'app-login-recluiter',
@@ -11,7 +11,7 @@ import { AuthService } from '../services/auth.service';
 export class LoginRecluiterComponent implements OnInit {
 
   constructor(private readonly router: Router,
-    public auth: AuthService,
+    public auth: AuthRecluiterService,
     private readonly fb: FormBuilder) { }
 
   ngOnInit(): void {
@@ -22,9 +22,9 @@ export class LoginRecluiterComponent implements OnInit {
     password: new FormControl('')
   });
 
-  login() {
+  loginReclu() {
     if (this.loginForm.valid) {
-      this.auth.login(this.loginForm.value).subscribe(
+      this.auth.loginReclu(this.loginForm.value).subscribe(
         (res) => {
           console.log(this.loginForm.value)
           this.router.navigate(['create-offers'])

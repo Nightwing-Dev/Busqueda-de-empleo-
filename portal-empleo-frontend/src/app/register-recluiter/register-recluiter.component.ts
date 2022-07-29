@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { UserService } from '../services/user.service';
+import { UserRecluiter } from '../services/user-recluiter.service';
+
 
 @Component({
   selector: 'app-register-recluiter',
@@ -11,7 +12,7 @@ import { UserService } from '../services/user.service';
 export class RegisterRecluiterComponent implements OnInit {
 
   constructor(private readonly router: Router,
-    public userSvc: UserService,
+    public recluiterSvc: UserRecluiter,
     private readonly fb: FormBuilder) { }
 
   ngOnInit(): void {
@@ -24,7 +25,7 @@ export class RegisterRecluiterComponent implements OnInit {
 
   register() {
     if (this.registerForm.valid) {
-      this.userSvc.register(this.registerForm.value).subscribe(
+      this.recluiterSvc.register(this.registerForm.value).subscribe(
         (res) => {
           console.log(this.registerForm.value)
           this.router.navigate(['login-recluiter'])
