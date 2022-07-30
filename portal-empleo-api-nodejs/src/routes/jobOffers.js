@@ -23,7 +23,7 @@ router.post('/jobOffers', async (req, res) => {
         descriptionCompany: req.body.descriptionCompany,
         salary: req.body.salary,
         location: req.body.location,
-        companyImage: req.body.location,
+        activity: req.body.activity,
         workingDate: req.body.workingDate,
         experience: req.body.experience,
         createAt: req.body.createAt
@@ -65,6 +65,7 @@ router.patch('/jobOffers/:_id', async (req, res) => {
                 descriptionCompany: req.body.descriptionCompany,
                 salary: req.body.salary,
                 location: req.body.location,
+                activity: req.body.activity,
                 workingDate: req.body.workingDate,
                 experience: req.body.experience
             }

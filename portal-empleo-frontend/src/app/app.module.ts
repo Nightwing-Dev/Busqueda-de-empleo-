@@ -19,6 +19,7 @@ import { RegisterRecluiterComponent } from './register-recluiter/register-reclui
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +40,8 @@ import { RegisterRecluiterComponent } from './register-recluiter/register-reclui
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

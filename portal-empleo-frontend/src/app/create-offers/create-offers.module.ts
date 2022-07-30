@@ -13,7 +13,6 @@ import { NavbarRecluiterComponent } from '../navbar-recluiter/navbar-recluiter.c
   imports: [
     CommonModule,
     CreateOffersRoutingModule,
-    
   ]
 })
 export class CreateOffersModule { }

@@ -15,8 +15,8 @@ export class JobsService{
          return this.http.get<any>("http://localhost:9000/jobOffers");
      }
 
-     postJobs(){
-     //   return this.http.post("");
+     postJobs(jobs: Jobs){
+      return this.http.post<Jobs>("http://localhost:9000/jobOffers", jobs);
      }
 
      udapteJobs(){

@@ -19,7 +19,7 @@ const jobOffersSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    companyImage: {
+    activity: {
         type: String,
         required: true
     },
