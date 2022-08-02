@@ -17,7 +17,6 @@ import { RegisterRecluiterComponent } from './register-recluiter/register-reclui
 import { FiltercityPipe } from './pipes/filtercity.pipe';
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,8 +29,8 @@ import { FiltercityPipe } from './pipes/filtercity.pipe';
     FilterPipe,
     LoginRecluiterComponent,
     RegisterRecluiterComponent,
-    FiltercityPipe,
-  
+    FiltercityPipe
+   
     
   ],
   imports: [

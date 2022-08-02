@@ -9,7 +9,7 @@ export class FiltercityPipe implements PipeTransform {
   transform(value: Array<Jobs>, arg: any): any {
     const resultPosts = [];
     for (const jobs of value) {
-      if (jobs.location.indexOf(arg) > -1) {
+      if (jobs.location.indexOf(arg) > -1) { 
         resultPosts.push(jobs);
       };
     };
