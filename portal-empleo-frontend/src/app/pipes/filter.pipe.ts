@@ -9,12 +9,12 @@ export class FilterPipe implements PipeTransform {
   transform(value: Array<Jobs>, arg: any): any {
     const resultPosts = [];
     for (const jobs of value) {
-      (value.toString().toLowerCase());
-      if (jobs.title.indexOf(arg) > -1) {
+      if (jobs.title.toLowerCase().indexOf(arg.toLowerCase()) > -1) {
+        (jobs.toString().toLowerCase());
         resultPosts.push(jobs);   
       };
     };
     return resultPosts;
   }
 }
-
+ 
