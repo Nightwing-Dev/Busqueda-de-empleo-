@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -15,8 +14,7 @@ import { FilterPipe } from './pipes/filter.pipe';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { LoginRecluiterComponent } from './login-recluiter/login-recluiter.component';
 import { RegisterRecluiterComponent } from './register-recluiter/register-recluiter.component';
-
-
+import { FiltercityPipe } from './pipes/filtercity.pipe';
 
 
 
@@ -32,6 +30,8 @@ import { RegisterRecluiterComponent } from './register-recluiter/register-reclui
     FilterPipe,
     LoginRecluiterComponent,
     RegisterRecluiterComponent,
+    FiltercityPipe,
+  
     
   ],
   imports: [

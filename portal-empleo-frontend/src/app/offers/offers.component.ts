@@ -10,7 +10,8 @@ import { JobsService } from '../services/jobs.service';
   styleUrls: ['./offers.component.scss']
 })
 export class OffersComponent implements OnInit {
-  
+  filtrarEmpleo: string = '';
+  filterCity: string = '';
   pages: number = 1;
   job!: Jobs[];
 

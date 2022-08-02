@@ -169,7 +169,7 @@
     </div>
     <div class="search-menu">
       <div class="search-bar">
-        <input type="text" placeholder="Filtra tu empleo">
+        <input type="text" placeholder="Filtra tu empleo" name="filtrarEmpleo" [(ngModel)]="filtrarEmpleo">
       </div>
       <div class="search-location">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -177,7 +177,7 @@
           <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
           <circle cx="12" cy="10" r="3" />
         </svg>
-        <input type="text" placeholder="Selecciona tu ciudad">
+        <input type="text" placeholder="Selecciona tu ciudad" name="filterCity" [(ngModel)]="filterCity">
       </div>
       <div class="search-job">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -322,7 +322,7 @@
         </div>
         <br>
         
-        <div class="pagination" *ngFor="let jobs of job | paginate: { itemsPerPage: 5, currentPage: pages }">
+        <div class="pagination" *ngFor="let jobs of job | filterCity: filterCity | filter : filtrarEmpleo">
           
           <div class="job-cards">
             <div class="job-card">
