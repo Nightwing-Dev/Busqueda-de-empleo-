@@ -11,20 +11,16 @@ import { JobsService } from '../services/jobs.service';
   styleUrls: ['./offers.component.scss']
 })
 export class OffersComponent implements OnInit {
+
   filtrarEmpleo: string = '';
   filterCity: string = '';
-  //filterSalary : 
+  filterSalary =  '';
   pages: number = 1;
   job!: Jobs[];
   p: number = 1;
   total: number = 0;
 
-
-
-
-
   constructor(private jobsSvc: JobsService) { }
-
 
   ngOnInit(): void {
     this.gettingJobs();

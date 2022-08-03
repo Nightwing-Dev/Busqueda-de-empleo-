@@ -20,7 +20,6 @@ import { FilterSalaryPipe } from './pipes/filter-salary.pipe';
 import { DatePipe } from '@angular/common';
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +34,7 @@ import { DatePipe } from '@angular/common';
     RegisterRecluiterComponent,
     FiltercityPipe,
     FilterYearsPipe,
-    FilterSalaryPipe  
+    FilterSalaryPipe,
   ],
   
   imports: [

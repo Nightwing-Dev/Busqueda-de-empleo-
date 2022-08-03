@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CreatedVacancyComponent } from './create-offers/created-vacancy/created-vacancy.component';
 import { LoginRecluiterComponent } from './login-recluiter/login-recluiter.component';
 import { LoginComponent } from './login/login.component';
 import { MainComponent } from './main/main.component';
@@ -21,8 +22,7 @@ const routes: Routes = [
   { path: 'video', component: VideoComponent },
   { path: 'login-recluiter', component: LoginRecluiterComponent },
   { path: 'register-recluiter', component: RegisterRecluiterComponent },
-  
-
+  { path: 'created-vacancy', component: CreatedVacancyComponent }
 ];
 
 @NgModule({

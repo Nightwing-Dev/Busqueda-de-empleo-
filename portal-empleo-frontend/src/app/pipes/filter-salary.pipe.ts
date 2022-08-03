@@ -9,8 +9,8 @@ export class FilterSalaryPipe implements PipeTransform {
   transform(value: Array<Jobs>, arg: any): any {
     const resultPosts = [];
     for (const jobs of value) {
-      if (jobs.salary.toPrecision().indexOf(arg) > -1) {
-        resultPosts.push(jobs);
+      if (typeof(jobs.salary) === 'number') {
+       resultPosts.push(jobs.salary.toString().toLowerCase().includes(arg));
       };
     };
     return resultPosts;

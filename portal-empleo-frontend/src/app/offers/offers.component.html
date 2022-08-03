@@ -210,7 +210,7 @@
             stroke="currentColor" />
           <path d="M23.3 6H.6a.8.8 0 010-1.5h22.6a.8.8 0 010 1.5z" stroke="currentColor" />
         </svg>
-        <select id="country" name="filterSalary" autocomplete="country-name" placeholder="anos de experiencia"
+        <select id="country" name="filterSalary" placeholder="anos de experiencia"
           class="mt-1 block py-2 border-none focus:outline-none sm:text-sm">
           <option class="low-color">Rango Salarial</option>
           <option>{{100 | currency}}</option>
@@ -344,7 +344,7 @@
         </div>
         <br>
 
-        <div class="pagination" *ngFor="let jobs of job | filterCity: filterCity | filter : filtrarEmpleo">
+        <div class="pagination" *ngFor="let jobs of job | filterCity: filterCity  | filter : filtrarEmpleo">
 
           <div class="job-cards">
             <div class="job-card">

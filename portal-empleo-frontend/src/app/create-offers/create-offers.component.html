@@ -72,24 +72,28 @@
                     <div class="px-5 py-5 bg-white sm:p-6">
                         <div class="grid grid-cols-3 gap-3">
                             <div class="col-span-6 sm:col-span-5">
-                                <label for="first-name" class="block text-sm font-medium text-gray-700">
+                                <label for="title" class="block text-sm font-medium text-gray-700">
                                     Nombre De Empleo</label>
-                                <input type="text" name="firstName" id="firstName" required formControlName="firstName"
+                                <input type="text" name="title" id="title" required formControlName="title"
                                     class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
-                                    <div *ngIf="vacancyForm.get('firstName')?.touched && vacancyForm.get('firstName')?.errors?.['required']"
-                                    class="validators">* Nombre Es Requerido *</div>
+                                    <div *ngIf="vacancyForm.get('title')?.touched && vacancyForm.get('title')?.errors?.['required']"
+                                    class="validators">* Nombre es requerido *</div>
                             </div>
                             <div class="col-span-6 sm:col-span-5">
-                                <label for="last-name"
+                                <label for="descriptionCompany"
                                     class="block text-sm font-medium text-gray-700">Descripción</label>
-                                <input type="text" name="last-name" id="last-name" autocomplete="family-name"
+                                <input type="text" name="descriptionCompany" required formControlName="descriptionCompany" id="descriptionCompany"
                                     class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                    <div *ngIf="vacancyForm.get('descriptionCompany')?.touched && vacancyForm.get('descriptionCompany')?.errors?.['required']"
+                                    class="validators">* Escribe la descripción del empleo *</div>
                             </div>
                             <div class="col-span-3 sm:col-span-2">
-                                <label for="country" class="block text-sm font-medium text-gray-700">Salario
+                                <label for="salary" class="block text-sm font-medium text-gray-700">Salario
                                     Establecido</label>
-                                <select id="country" name="country" autocomplete="country-name"
+                                <select id="salary" name="salary" autocomplete="salary" required formControlName="salary"
                                     class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                    <div *ngIf="vacancyForm.get('salary')?.touched && vacancyForm.get('salary')?.errors?.['required']"
+                                    class="validators">**</div>
                                     <option class="low-color">Selecciona opción</option>
                                     <option>100</option>
                                     <option>200</option>
@@ -103,8 +107,8 @@
                                 </select>
                             </div>
                             <div class="col-span-6 sm:col-span-4">
-                                <label for="country" class="block text-sm font-medium text-gray-700">Ciudad</label>
-                                <select id="country" name="country" autocomplete="country-name"
+                                <label for="location" class="block text-sm font-medium text-gray-700">Ciudad</label>
+                                <select id="location" name="location" required formControlName="location" autocomplete="location-name"
                                     class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
                                     <option class="low-color">Selecciona una ciudad</option>
                                     <option>Cali</option>
@@ -121,21 +125,25 @@
                             <div class="col-span-6">
                                 <label for="street-address"
                                     class="block text-sm font-medium text-gray-700">Funciones</label>
-                                <input type="text" name="street-address" id="street-address"
+                                <input type="text" name="activity" required formControlName="activity" id="activity"
                                     autocomplete="street-address"
                                     class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                    <div *ngIf="vacancyForm.get('activity')?.touched && vacancyForm.get('activity')?.errors?.['required']"
+                                    class="validators">* Escribe las funciones que requieres *</div>
                             </div>
 
                             <div class="col-span-6 sm:col-span-6 lg:col-span-2">
-                                <label for="city" class="block text-sm font-medium text-gray-700">Modalidad</label>
-                                <input type="text" name="city" id="city" autocomplete="address-level2"
+                                <label for="workingDate" class="block text-sm font-medium text-gray-700">Modalidad</label>
+                                <input type="text" name="workingDate" id="workingDate" required formControlName="workingDate" autocomplete="address-level2"
                                     class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                    <div *ngIf="vacancyForm.get('workingDate')?.touched && vacancyForm.get('workingDate')?.errors?.['required']"
+                                    class="validators">* La modalidad del empleo es requerida *</div>
                             </div>
 
                             <div class="col-span-6 sm:col-span-3 lg:col-span-2">
                                 <label for="region" class="block text-sm font-medium text-gray-700">Experiencia
                                 </label>
-                                <select id="country" name="country" autocomplete="country-name"
+                                <select id="experience" name="experience" required formControlName="experience" autocomplete="country-name"
                                     class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
                                     <option class="low-color">Años</option>
                                     <option>1</option>
@@ -150,13 +158,13 @@
                                 <label for="postal-code" class="block text-sm font-medium text-gray-700">Fecha De
                                     Publicación
                                 </label>
-                                <input type="date" name="postal-code" id="postal-code" autocomplete="postal-code"
+                                <input type="date" name="createdAt" id="createdAt" required formControlName="createdAt" autocomplete="postal-code"
                                     class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
                             </div>
                         </div>
                     </div>
                     <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
-                        <button type="submit"
+                        <button type="submit" [disabled]="vacancyForm.invalid"
                             class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Crear
                             Vacante</button>
                     </div>

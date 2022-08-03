@@ -33,12 +33,13 @@ export class CreateOffersComponent implements OnInit {
 
   });
 
+
   registerOffer() {
     if (this.vacancyForm.valid) {
       this.jobsSvc.postJobs(this.vacancyForm.value).subscribe(
         (res) => {
           console.log(this.vacancyForm.value)
-          this.router.navigate([''])
+          this.router.navigate(['video'])
         }, (err: Error) => {
           alert(err.message)
         });
