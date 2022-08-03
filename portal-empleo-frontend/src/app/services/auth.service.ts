@@ -7,7 +7,6 @@ import { UserService } from './user.service';
 })
 export class AuthService {
 
-
     private _isLoggedIn$ = new BehaviorSubject<boolean>(false)
     isLoggedIn$ = this._isLoggedIn$.asObservable()
     constructor(private usersService: UserService) {

@@ -67,15 +67,17 @@
             <div class="md:col-span-5">
             </div>
             <img src="../../assets/wave(1).png" class="wave" width="380px">
-            <form action="#" method="POST">
+            <form (ngSubmit)="registerOffer()" [formGroup]="vacancyForm">
                 <div class="shadow overflow-hidden sm:rounded-md shadow-lg">
                     <div class="px-5 py-5 bg-white sm:p-6">
                         <div class="grid grid-cols-3 gap-3">
                             <div class="col-span-6 sm:col-span-5">
                                 <label for="first-name" class="block text-sm font-medium text-gray-700">
                                     Nombre De Empleo</label>
-                                <input type="text" name="first-name" id="first-name" autocomplete="given-name"
+                                <input type="text" name="firstName" id="firstName" required formControlName="firstName"
                                     class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                    <div *ngIf="vacancyForm.get('firstName')?.touched && vacancyForm.get('firstName')?.errors?.['required']"
+                                    class="validators">* Nombre Es Requerido *</div>
                             </div>
                             <div class="col-span-6 sm:col-span-5">
                                 <label for="last-name"

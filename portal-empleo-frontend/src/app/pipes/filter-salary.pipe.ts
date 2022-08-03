@@ -2,19 +2,17 @@ import { Pipe, PipeTransform } from '@angular/core';
 import { Jobs } from '../interfaces/jobs.interface';
 
 @Pipe({
-  name: 'filter'
+  name: 'filterSalary'
 })
-export class FilterPipe implements PipeTransform {
+export class FilterSalaryPipe implements PipeTransform {
 
   transform(value: Array<Jobs>, arg: any): any {
     const resultPosts = [];
     for (const jobs of value) {
-      if (jobs.title.toString().toLowerCase().indexOf(arg.toLowerCase()) > -1) {
-        (jobs.toString().toLowerCase());
-        resultPosts.push(jobs);   
+      if (jobs.salary.toPrecision().indexOf(arg) > -1) {
+        resultPosts.push(jobs);
       };
     };
     return resultPosts;
   }
 }
- 

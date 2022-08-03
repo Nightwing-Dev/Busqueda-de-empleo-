@@ -8,7 +8,6 @@ import { UserRecluiter } from './user-recluiter.service';
 })
 export class AuthRecluiterService {
 
-
     private _isLoggedIn$ = new BehaviorSubject<boolean>(false)
     isLoggedIn$ = this._isLoggedIn$.asObservable()
     constructor(private userrecluiter: UserRecluiter) {

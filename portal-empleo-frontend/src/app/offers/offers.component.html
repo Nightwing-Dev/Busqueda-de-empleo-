@@ -177,7 +177,7 @@
           <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
           <circle cx="12" cy="10" r="3" />
         </svg>
-        <input type="text" placeholder="Selecciona tu ciudad" name="filterCity" [(ngModel)]="filterCity">
+        <input type="text" placeholder="Escribe tu ciudad" name="filterCity" [(ngModel)]="filterCity">
       </div>
       <div class="search-job">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -188,6 +188,7 @@
         <select id="country" name="country" autocomplete="country-name" placeholder="anos de experiencia"
           class="mt-1 block py-2 border-none focus:outline-none sm:text-sm">
           <option class="low-color">Años De Experiencia</option>
+          <option>0</option>
           <option>1</option>
           <option>2</option>
           <option>3</option>
@@ -209,7 +210,20 @@
             stroke="currentColor" />
           <path d="M23.3 6H.6a.8.8 0 010-1.5h22.6a.8.8 0 010 1.5z" stroke="currentColor" />
         </svg>
-        <input type="text" placeholder="Rango de salario">
+        <select id="country" name="filterSalary" autocomplete="country-name" placeholder="anos de experiencia"
+          class="mt-1 block py-2 border-none focus:outline-none sm:text-sm">
+          <option class="low-color">Rango Salarial</option>
+          <option>{{100 | currency}}</option>
+          <option>{{200 | currency}}</option>
+          <option>{{300 | currency}}</option>
+          <option>{{400 | currency}}</option>
+          <option>{{500 | currency}}</option>
+          <option>{{600 | currency}}</option>
+          <option>{{700 | currency}}</option>
+          <option>{{800 | currency}}</option>
+          <option>{{900 | currency}}</option>
+          <option>{{1000| currency}}</option>
+        </select>
       </div>
       <button class="search-button">Buscar Trabajo</button>
     </div>
@@ -346,6 +360,8 @@
                 <button class="search-buttons detail-button">{{jobs.workingDate}}</button>
                 <button class="search-buttons detail-button">{{jobs.experience}} años</button>
                 <button class="search-buttons detail-button">{{jobs.location}}</button>
+                <button class="search-buttons detail-button">{{jobs.salary | currency }}</button>
+                <button class="search-buttons detail-button">Vacante Publicada : {{jobs.createdAt | date :"dd.MM.yyyy"}}</button>
               </div>
               <div class="job-card-buttons">
                 <button class="search-buttons card-buttons">Aplicar Ahora</button>

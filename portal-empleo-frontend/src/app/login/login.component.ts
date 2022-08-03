@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit {
       this.auth.login(this.loginForm.value).subscribe(
         (res) => {
           console.log(this.loginForm.value)
-          this.router.navigate(['video'])
+          this.router.navigate(['video']);
         }, (err: Error) => {
           alert(err.message);
         }
@@ -44,7 +44,7 @@ export class LoginComponent implements OnInit {
   }
 
   clickRegister() {
-    this.router.navigate(['register'])
+    this.router.navigate(['register']);
   }
   mostrarPass() {
     let x = (<HTMLInputElement>document.getElementById("inputContra"));

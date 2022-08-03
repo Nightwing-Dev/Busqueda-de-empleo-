@@ -46,14 +46,14 @@ POST http://localhost:9000/jobOffers HTTP/1.1
 Content-Type: application/json
 
 {
-    "title": "Medico cirujano",
-    "descriptionCompany":"Hospital Imss necesita urgentemente un cirujano que ame robar organos y trabaje como frankestein" ,
-    "salary":"500",
-    "location":"Mexico",
-    "activity":"Trafico de organos con mucha etica",
+    "title": "Repartidor de pizzass",
+    "descriptionCompany":"pizza hut esta en busqueda de gente desocupada de la vida, para repartir pizza, nos encanta compartir la pizza con nuestros clientes" ,
+    "salary":"100",
+    "location":"Barranquilla",
+    "activity":"Ser esclavo de pizza hut",
     "workingDate":"Media Jornada",
-    "experience":"5",
-    "createdAt":""
+    "experience":"0",
+    "createdAt":"03/02/1991"
 }
 
 //VER TODOS LOS TRABAJOS CREADOS Y DISPONIBLES

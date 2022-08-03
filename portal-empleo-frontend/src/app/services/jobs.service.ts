@@ -12,11 +12,11 @@ export class JobsService{
     constructor(private http: HttpClient){}
     
      getJobs(){
-         return this.http.get<any>("http://localhost:9000/jobOffers");
+         return this.http.get<Jobs[]>("http://localhost:9000/jobOffers");
      }
 
      postJobs(jobs: Jobs){
-      return this.http.post<Jobs>("http://localhost:9000/jobOffers", jobs);
+      return this.http.post<Jobs[]>("http://localhost:9000/jobOffers", jobs);
      }
 
      udapteJobs(){

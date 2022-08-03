@@ -15,6 +15,10 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { LoginRecluiterComponent } from './login-recluiter/login-recluiter.component';
 import { RegisterRecluiterComponent } from './register-recluiter/register-recluiter.component';
 import { FiltercityPipe } from './pipes/filtercity.pipe';
+import { FilterYearsPipe } from './pipes/filter-years.pipe';
+import { FilterSalaryPipe } from './pipes/filter-salary.pipe';
+import { DatePipe } from '@angular/common';
+
 
 
 @NgModule({
@@ -29,10 +33,11 @@ import { FiltercityPipe } from './pipes/filtercity.pipe';
     FilterPipe,
     LoginRecluiterComponent,
     RegisterRecluiterComponent,
-    FiltercityPipe
-   
-    
+    FiltercityPipe,
+    FilterYearsPipe,
+    FilterSalaryPipe  
   ],
+  
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -42,7 +47,7 @@ import { FiltercityPipe } from './pipes/filtercity.pipe';
     NgxPaginationModule,
 
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
