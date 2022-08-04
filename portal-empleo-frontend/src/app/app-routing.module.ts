@@ -6,6 +6,7 @@ import { LoginComponent } from './login/login.component';
 import { MainComponent } from './main/main.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { OffersComponent } from './offers/offers.component';
+import { PostulationsComponent } from './postulations/postulations.component';
 import { RegisterRecluiterComponent } from './register-recluiter/register-recluiter.component';
 import { RegisterComponent } from './register/register.component';
 import { VideoComponent } from './video/video.component';
@@ -21,7 +22,8 @@ const routes: Routes = [
   { path: 'video', component: VideoComponent },
   { path: 'login-recluiter', component: LoginRecluiterComponent },
   { path: 'register-recluiter', component: RegisterRecluiterComponent },
-  { path: 'created-vacancy', component: CreatedVacancyComponent }
+  { path: 'created-vacancy', component: CreatedVacancyComponent },
+  { path: 'postulations', component: PostulationsComponent }
 ];
 
 @NgModule({
