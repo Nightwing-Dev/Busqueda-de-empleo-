@@ -39,7 +39,7 @@ export class CreateOffersComponent implements OnInit {
       this.jobsSvc.postJobs(this.vacancyForm.value).subscribe(
         (res) => {
           console.log(this.vacancyForm.value)
-          this.router.navigate(['video'])
+          this.router.navigate(['created-vacancy'])
         }, (err: Error) => {
           alert(err.message)
         });

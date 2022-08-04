@@ -4,7 +4,6 @@ import { CreatedVacancyComponent } from './create-offers/created-vacancy/created
 import { LoginRecluiterComponent } from './login-recluiter/login-recluiter.component';
 import { LoginComponent } from './login/login.component';
 import { MainComponent } from './main/main.component';
-import { NavbarRecluiterComponent } from './navbar-recluiter/navbar-recluiter.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { OffersComponent } from './offers/offers.component';
 import { RegisterRecluiterComponent } from './register-recluiter/register-recluiter.component';
