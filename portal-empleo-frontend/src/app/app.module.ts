@@ -18,6 +18,7 @@ import { FiltercityPipe } from './pipes/filtercity.pipe';
 import { FilterYearsPipe } from './pipes/filter-years.pipe';
 import { FilterSalaryPipe } from './pipes/filter-salary.pipe';
 import { DatePipe } from '@angular/common';
+import { PostulationsComponent } from './postulations/postulations.component';
 
 
 @NgModule({
@@ -35,6 +36,7 @@ import { DatePipe } from '@angular/common';
     FiltercityPipe,
     FilterYearsPipe,
     FilterSalaryPipe,
+    PostulationsComponent,
   ],
   
   imports: [
