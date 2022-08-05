@@ -16,16 +16,19 @@ export class PostulationsService {
     }
 
     private addJobs(jobs: Jobs): void {
-        const isJobInBanner = this.jobs.find(({ title }) => title === jobs.title)
+        const isJobInBanner = this.jobs.find(({ title }) => title === jobs.title);
 
         if (isJobInBanner) {
-            this.jobs.push({...jobs})
+            this.jobs.push({ ...jobs })
 
         } else {
-            this.jobs.push({ ...jobs})
+            this.jobs.push({ ...jobs })
         }
 
-
         this.jobsSubject.next(this.jobs);
+    }
+
+    udapteJobs(jobs: Jobs): void {
+        this.addJobs(jobs);
     }
 }

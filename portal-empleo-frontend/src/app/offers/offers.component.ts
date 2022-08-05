@@ -2,6 +2,7 @@ import { DatePipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Jobs } from '../interfaces/jobs.interface';
 import { JobsService } from '../services/jobs.service';
+import { PostulationsService } from '../services/postulations.service';
 
 
 
@@ -20,7 +21,7 @@ export class OffersComponent implements OnInit {
   p: number = 1;
   total: number = 0;
 
-  constructor(private jobsSvc: JobsService) { }
+  constructor(private jobsSvc: JobsService, private addJobsSvc: PostulationsService) { }
 
   ngOnInit(): void {
     this.gettingJobs();
@@ -56,5 +57,10 @@ export class OffersComponent implements OnInit {
   pageChangeEvent(event: number) {
     this.p = event;
     this.gettingJobs();
+  }
+
+  addToBanner(job:Jobs): void{
+    console.log('Agregado al banner', job);
+    this.addJobsSvc.udapteJobs(job);
   }
 }
