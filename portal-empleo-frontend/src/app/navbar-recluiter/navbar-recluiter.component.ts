@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar-recluiter',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarRecluiterComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+   
+  logout() {
+    localStorage.removeItem('token')
+    this.router.navigate(['login-recluiter']);
   }
-
 }

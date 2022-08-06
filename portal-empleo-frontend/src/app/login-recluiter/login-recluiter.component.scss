@@ -28,7 +28,9 @@ body{
 	justify-content: flex-start;
 	align-items: center;
 	text-align: center;
+	
 }
+
 
 .title{
     font-size: 25px;
@@ -87,7 +89,8 @@ form{
 
 .input-div > div{
     position: relative;
-	height: 45px;
+	height: 40px;
+	margin-top: 10px;
     
 }
 
@@ -107,7 +110,7 @@ form{
 .input-div > div > h5{
 	position: absolute;
 	left: 10px;
-	top: 50%;
+	top: 40%;
 	transform: translateY(-50%);
 	color: #999;
 	font-size: 18px;
@@ -170,7 +173,7 @@ img, video {
 	outline: none;
 	background: none;
 	padding: 0.5rem 0.7rem;
-	font-size: 1.2rem;
+	font-size: 1rem;
 	color: #555;
 	font-family: 'poppins', sans-serif;
     text-align: center;
