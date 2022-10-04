@@ -1,4 +1,4 @@
-# Busqueda-de-empleo-
+# Busqueda-de-empleo full stack-
 implementa todos los conceptos de angular 13. 
 
 
